@@ -137,3 +137,25 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
 Once there is a release already created, in order to create a new release, the **tag** field should be changed in order to avoid errors. 
+
+## Source Links
+https://buildd.co/product/build-automation
+
+https://developers.redhat.com/blog/2017/09/06/continuous-integration-a-typical-process?cicd=32h281b
+
+https://www.atlassian.com/continuous-delivery/continuous-integration
+
+https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+
+https://jenkins.io/
+
+https://circleci.com/
+
+https://about.gitlab.com/
+
+https://www.altexsoft.com/blog/engineering/cicd-tools-comparison/
+
+https://www.youtube.com/watch?v=R8_veQiYBjI
+
+https://www.dawntraoz.com/blog/how-to-add-ci-to-frontend-project-with-github-actions/
+
