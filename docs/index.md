@@ -49,7 +49,7 @@ GitLab is another popular tool for DevOps which is based on the web and also fea
 Workflows are all the processes of build automation. They are an automated procedure made up of one or more jobs that is added to a repository and can be triggered by an event. They are defined using yaml. or yml. files and with it you can build, test, package, release, or deploy our code on GitHub. For instance, if someone creates an issue, we still have to rate it as a major/minor bug, review the pull request, check if the bug is fixed, prepare the new release and more. As more contributors are on a project, the more common this kind of situation will be. In order to avoid this and save time, you can create workflows which can listen to events and run jobs. This way we can forget about tasks like the issue reviewing, the building of our repository or the deployment.
 
 #### Events
-An event is an activity that triggers a workflow. You can use events for things like pull requests merging, commits and other events listed here. 
+An event is an activity that triggers a workflow. You can use events for things like pull requests merging, commits and other events listed [here](https://docs.github.com/en/actions/reference/events-that-trigger-workflows).
 
 #### Jobs
 When an event is triggered, the set of steps that are executed are the jobs. By default, jobs are run in parallel, but if you define it, it can also run sequentially. 
