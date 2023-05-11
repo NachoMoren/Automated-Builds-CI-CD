@@ -12,4 +12,7 @@ Even if there is not established a quantity of time between two releases, in ord
 On the other hand, continuous deployment goes a step further than continuous delivery. With continuous deployment, every change done that passes all the tests and all the stages will be released to the customers. Working this way is an excellent way to accelerate the feedback loop with customers. 
 
 ## Comparison between different CI/CD tools
+## 1. [GitHub Actions](https://github.com/features/actions)
+GitHub Actions is a CI/CD tool provided within GitHub. Workflows can be automated, customized, and executed right within GitHub repositories, which added to the generous free tier makes GitHub Actions the best tool for testing CI/CD pipelines and for small projects.
+
 
