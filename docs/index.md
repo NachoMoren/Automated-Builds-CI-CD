@@ -10,6 +10,8 @@ The goal of including CI in your project is to reduce the problems generated whi
 
 ![Continuous integration](images/continous_integration.png)
 
+![Continuous integration](images/0_Ibsu7Nvvd9gyhHxO.png)
+
 
 ## Continuous Delivery and Continuous Develpoment(CD)
 Continuous delivery is an extension of continuous integration, since it automatically deploys all code changes to a testing and/or production environment after the build stage. This means that you have an automated release process and you can deploy your app any time by clicking a button. 
