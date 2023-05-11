@@ -57,6 +57,8 @@ When an event is triggered, the set of steps that are executed are the jobs. By 
 #### Steps
 The steps are the sequence of tasks that a job should perform. There are 2 kind of tasks, actions and commands. Actions are specific tasks that may depend on your purposes and commands are OS terminal code lines that you can run from GitHub Actions.
 
+![Workflow](images/GithubActionsStructure.png)
+
 ### Setting up Actions
 
 #### Step 1
