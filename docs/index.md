@@ -102,4 +102,4 @@ jobs:
         artifacts: "release.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
-
+Once there is a release already created, in order to create a new release, the **tag** field should be changed in order to avoid errors. 
