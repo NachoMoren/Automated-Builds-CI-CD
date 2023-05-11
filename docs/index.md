@@ -61,5 +61,45 @@ To check if the workflow works correctly, go back to the Actions panel. We will 
 
 
 ## GitHub Actions to create automatic release
-Here i am going to explain how to apply GitHub Actions to automatically create a release. 
+Here i am going to explain how to apply GitHub Actions to automatically create a release. Once we have our starter workflow enabled and running, we can create another workflow (with the same template) or we can edit our .yml file generated in our repository. For this Actions, we will use two pre-build Actions on GitHub [marketplace](https://github.com/marketplace): [Zip Release](https://github.com/marketplace/actions/zip-release) and [Create Release](https://github.com/marketplace/actions/create-release). We will use those Actions by using the command **uses** under our steps section. The code should look like this:
+```yml
+# This is a basic workflow to help you get started with Actions
+
+name: Release Generator
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: 
+      - main
+    tags:
+      - 'v2.*'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # We are generating the zip excluding the gitignore (or any other file specified in the exclusions)
+     - uses: actions/checkout@v2
+     - name: Zip Generator
+       uses: thedoctor0/zip-release@master
+       with:
+        filename: 'release.zip'
+        exclusions: '*.gitignore* *.git* *.github*'
+      # Creates a release uploading the release.zip file. The github token is usually under secrets.GITHUB_TOKEN, however in the future this may be different.
+     - name: Create Release
+       uses: ncipollo/release-action@v1.12.0
+       with:
+        tag: Test
+        artifacts: "release.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
+```
 
